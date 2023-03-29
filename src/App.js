@@ -14,6 +14,7 @@ import PatientAbout from "./Pages/PatientAbout";
 import PatientComplaint from "./Pages/Complaint.";
 import Hospital from "./Pages/Hospitals";
 import Machine from "./Pages/Machine";
+import PatientAppointments from "./Pages/pat_appointment";
 function App() {
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ function App() {
         <Route path="/patient/signin" element={<Login />}></Route>
         {/* <Route path="/patient//signin" element={<Login />}></Route> */}
         <Route path="/lab/:labId/home" element={<LabHome />}></Route>
+        <Route path = "/patient/appointments" element={<PatientAppointments/>}></Route>
       </Routes>
     </BrowserRouter>
   );
