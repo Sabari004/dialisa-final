@@ -68,13 +68,15 @@ export default function Login() {
   }, []);
   const validateUser = async (e) => {
     e.preventDefault();
-    let x = 0;
+    let x = 0,
+      j = 0;
     for (let i = 0; i < listOfUsers.length; i++) {
       if (
         listOfUsers[i].patId == username &&
         listOfUsers[i].password === password
       ) {
         x = 1;
+        j = i;
         break;
       }
     }
@@ -82,7 +84,8 @@ export default function Login() {
       alert("Invalid credentials");
     } else {
       alert("Login successful");
-      navigate(`/patient/${username}`);
+      localStorage.setItem("patientKey", JSON.stringify(listOfUsers[j]));
+      navigate(`/patient/appoinment`);
     }
   };
   return (

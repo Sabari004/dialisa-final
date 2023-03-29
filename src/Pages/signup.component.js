@@ -10,17 +10,30 @@ export default function SignUp() {
   const [patPhNo, setPatPhNo] = useState("");
   const [post, setPost] = useState();
   let navigate = useNavigate();
+  const [listOfUsers, setlistOfUsers] = useState({});
   async function validateUser(e) {
     e.preventDefault();
+    setlistOfUsers();
     await axios.post("http://localhost:8080/patient", {
       patId: patId,
-      pentName: PatientName,
-      sword: password,
-      pentAge: PatientAge,
+      patientName: PatientName,
+      password: password,
+      patientAge: PatientAge,
       sex: sex,
-      PhNo: patPhNo,
+      patPhNo: patPhNo,
     });
-    navigate(`/patient/${patId}`);
+    localStorage.setItem(
+      "patientKey",
+      JSON.stringify({
+        patId: patId,
+        patientName: PatientName,
+        password: password,
+        patientAge: PatientAge,
+        sex: sex,
+        patPhNo: patPhNo,
+      })
+    );
+    navigate(`/patient/appoinment`);
     alert("PatientRegister Successfully");
     setPatId();
     setPatientName();

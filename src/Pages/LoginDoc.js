@@ -14,12 +14,14 @@ export default function LoginDoc() {
   const validateUser = async (e) => {
     e.preventDefault();
     let x = 0;
+    let j = 0;
     for (let i = 0; i < listOfUsers.length; i++) {
       if (
         listOfUsers[i].labId == username &&
         listOfUsers[i].password === password
       ) {
         x = 1;
+        j = i;
         break;
       }
     }
@@ -27,7 +29,8 @@ export default function LoginDoc() {
       alert("Invalid credentials");
     } else {
       alert("Login successful");
-      navigate("/lab/home");
+      localStorage.setItem("labKey", JSON.stringify(listOfUsers[j]));
+      navigate(`/lab/home`);
     }
   };
   return (

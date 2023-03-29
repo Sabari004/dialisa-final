@@ -18,13 +18,23 @@ export default function SignUpDoc() {
       labName: labName,
       labLocation: labLocation,
       password: password,
-      // gender: gender,
       labPhNo: labPhNo,
-      // hosId: hosId,
       price: price,
     });
     alert("success");
-    navigate(`/lab/${labId}`);
+
+    localStorage.setItem(
+      "labKey",
+      JSON.stringify({
+        labId: labId,
+        labName: labName,
+        labLocation: labLocation,
+        password: password,
+        labPhNo: labPhNo,
+        price: price,
+      })
+    );
+    navigate(`/lab/home`);
 
     // .then(response=>{
     //     console.log(response.data);

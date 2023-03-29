@@ -35,10 +35,7 @@ function PatientNavBar() {
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <Link
-                  class="nav-link active"
-                  // to="/patient/home"
-                >
+                <Link class="nav-link active" to="/patient/home">
                   <span style={{ fontSize: 20 }}>Home</span>
                 </Link>
               </li>
@@ -54,7 +51,7 @@ function PatientNavBar() {
               <li class="nav-item">
                 <Link
                   class="nav-link active"
-                  // to="/patient/aboutus"
+                  to="/patient/aboutus"
                   style={{ paddingLeft: 25 }}
                 >
                   <span style={{ fontSize: 20 }}>About</span>
@@ -64,10 +61,19 @@ function PatientNavBar() {
               <li class="nav-item">
                 <Link
                   class="nav-link active"
-                  // to="complaint"
+                  to="/patient/complaint"
                   style={{ paddingLeft: 25 }}
                 >
                   <span style={{ fontSize: 20 }}>FeedBacks</span>
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  class="nav-link active"
+                  to="/patient/bookedappointments"
+                  style={{ paddingLeft: 25 }}
+                >
+                  <span style={{ fontSize: 20 }}>BookedAppointments</span>
                 </Link>
               </li>
 

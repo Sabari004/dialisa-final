@@ -12,6 +12,11 @@ function Hospitals() {
   const location = useLocation();
   const navigate = useNavigate();
   let id = 40;
+  const [userName, setUserName] = useState(() => {
+    const savedItem = localStorage.getItem("dataKey");
+    const parsedItem = JSON.parse(savedItem);
+    return parsedItem || "";
+  });
   const [labaratories, setLabaratories] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:8080/lab").then((response) => {
@@ -24,6 +29,7 @@ function Hospitals() {
     <>
       <PatientNavBar />
       <center>
+        {/* <h1>{userName.patId}</h1> */}
         <div className={styles.hospital_cards}>
           {labaratories.map((lab) => (
             <>
