@@ -1,22 +1,11 @@
 import PatientNavBar from "../Components/PatientNavBar";
 import Styles from "../Styles/Home.module.css";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
 function Home() {
-  const [userName, setUserName] = useState(() => {
-    const savedItem = localStorage.getItem("patientKey");
-    const parsedItem = JSON.parse(savedItem);
-    return parsedItem || "";
-  });
   let location = useLocation();
-  useEffect(() => {
-    axios.get(`http://localhost:8080/shift/patid/${userName.patId}`);
-  }, []);
   return (
     <>
       <PatientNavBar />
-
       <div className={Styles.containerHome}>
         <div className={Styles.containerHomeIn}>
           <div className={Styles.containerHomeImg}>

@@ -1,0 +1,51 @@
+.button_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.button_container_in{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.button_container_in button{
+    padding: 40px;
+    border: none;
+    background-color: aqua;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.button_container_out{
+    background-color: aqua;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.button_container_out label ,input{
+    margin: 10px;
+    font-size: 20px;}
+    .slot_container{
+        display: flex;
+        justify-content: space-around;
+        background-color: aqua;
+        margin: 100px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.slot_container button{
+    margin-top: 30px;
+    margin-left: 125px;
+    border: none;
+    padding: 6px;
+    background-color: rgb(129, 175, 254);
+    border-radius: 10px;
+    
+}
+.slot_container button:hover{
+    /* background-color:  rgb(155, 189, 247); */
+    /* transition: 0.5s; */
+    transform: scale(1.0.5);
+}

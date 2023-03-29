@@ -27,29 +27,42 @@ function LabAppoinment() {
   return (
     <>
       <DoctorNavBar />
-
-      <h1>Lab Appoinment</h1>
       <div className={Styles.button_container}>
         <div>
-          <button
-            onClick={(e) => {
-              axios.post("http://localhost:8080/machine", {
-                labId: userName.labId,
-              });
-            }}
-          >
-            Add Machine
-          </button>
+          <h1>Lab Appoinment</h1>
+          <div className={Styles.button_container_in}>
+            <button
+              onClick={(e) => {
+                axios.post("http://localhost:8080/machine", {
+                  labId: userName.labId,
+                });
+              }}
+            >
+              Add Machine
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* {machines && (
           <>
-            {machines.map((m) => (
-              <div className={Styles.button_container_in}>
-                {/* <h1>{add++}</h1> */}
+            {machines.map((mac, ind) => {
+              <h1>rtr</h1>;
+            })}
+          </>
+        )} */}
+      <div className={Styles.button_container}>
+        <div style={{ textAlign: "center" }}>
+          <h1>Total Machines</h1>
+          <div className={Styles.button_container_in}>
+            <>
+              {machines.map((m) => (
                 <button onClick={(e) => navigate(`/lab/appoinment/${m.macId}`)}>
                   machine {add++}
                 </button>
-              </div>
-            ))}
-          </>
+              ))}
+            </>
+          </div>
         </div>
       </div>
     </>

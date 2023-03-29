@@ -19,6 +19,7 @@ import MachineSlot from "./Pages/MachineSlot";
 import Hospitals from "./Pages/Hospitals";
 import BookPatientAppointment from "./Pages/BookPatientAppointment";
 import PatientBookedSlots from "./Pages/PatientBookedSlots";
+import TodaysAppointment from "./Pages/TodaysAppointment";
 function App() {
   return (
     <BrowserRouter>
@@ -43,6 +44,7 @@ function App() {
         <Route path="/lab/appoinment/:macId" element={<MachineSlot />}></Route>
         <Route path="/patient/home" element={<PatientHome />}></Route>
         <Route path="/patient/appoinment" element={<Hospitals />}></Route>
+        <Route path="/lab/slot" element={<TodaysAppointment />}></Route>
         <Route path="/patient/signup" element={<SignUp />}></Route>
         <Route path="/patient/signin" element={<Login />}></Route>
 

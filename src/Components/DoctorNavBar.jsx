@@ -50,7 +50,16 @@ function DoctorNavBar() {
                   to="/lab/appoinment"
                   style={{ fontSize: 20 }}
                 >
-                  Appoinment
+                  Slots
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  class="nav-link active"
+                  to="/lab/slot"
+                  style={{ fontSize: 20 }}
+                >
+                  Appointment
                 </Link>
               </li>
               <li class="nav-item">

@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import '../Styles/Patients.module.css';
-import "../Styles/labsignin.css";
 export default function LoginDoc() {
   const [listOfUsers, setlistOfUsers] = useState(0);
   const [username, setUsername] = useState(0);
@@ -36,16 +34,10 @@ export default function LoginDoc() {
     }
   };
   return (
-    <>
-    <div className="lab-signIn">
-      <img className="logo_image" src="https://res.cloudinary.com/dobtf02zs/image/upload/v1679632344/logo_gwiuby.png" alt="logo"></img>
-      <h3 className="dia">Dialisa</h3>
-    </div>
-    <div className="sign-in-form">
-    <form className="sign_in_form">
+    <form>
       <h3>Laboratory Sign In</h3>
 
-      <div className="mb-3" id="form_i">
+      <div className="mb-3">
         <label>Lab Id</label>
         <input
           type="number"
@@ -93,7 +85,5 @@ export default function LoginDoc() {
         Don't have an account <Link to="/lab/signup">Sign Up</Link>
       </p>
     </form>
-    </div>
-    </>
   );
 }

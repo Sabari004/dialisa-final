@@ -4,6 +4,7 @@ import PatientNavBar from "../Components/PatientNavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Styles from "../Styles/Machines.module.css";
 function BookPatientAppointment() {
   const navigate = useNavigate();
   let { macId } = useParams();
@@ -26,35 +27,39 @@ function BookPatientAppointment() {
   return (
     <div>
       <PatientNavBar />
-      {/* <h1>ghuio</h1> */}
-      <div>
-        {slots.map((slot) => (
-          <>
-            <input
-              type="radio"
-              disabled={slot.flag}
-              name="check"
-              for="check"
-              onClick={(e) => {
-                axios.post(`http://localhost:8080/shift`, {
-                  shiftId: slot.shiftId,
-                  macId: slot.macId,
-                  patId: userName.patId,
-                  flag: true,
-                  labId: slot.labId,
-                  stTime: slot.stTime,
-                  endTime: slot.endTime,
-                });
-                alert("Slot is booked");
-                navigate("/patient/home");
-              }}
-            ></input>
-            <label>
-              {slot.stTime}-{slot.endTime}
-            </label>
-            <br />
-          </>
-        ))}
+      <div className={Styles.button_container}>
+        <div>
+          <h1>Choose a Slot</h1>
+          <div className={Styles.button_container_out}>
+            {slots.map((slot) => (
+              <>
+                <input
+                  type="radio"
+                  disabled={slot.flag}
+                  name="check"
+                  for="check"
+                  onClick={(e) => {
+                    axios.post(`http://localhost:8080/shift`, {
+                      shiftId: slot.shiftId,
+                      macId: slot.macId,
+                      patId: userName.patId,
+                      flag: true,
+                      labId: slot.labId,
+                      stTime: slot.stTime,
+                      endTime: slot.endTime,
+                    });
+                    alert("Slot is booked");
+                    navigate("/patient/home");
+                  }}
+                ></input>
+                <label>
+                  {slot.stTime} - {slot.endTime}
+                </label>
+                <br />
+              </>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

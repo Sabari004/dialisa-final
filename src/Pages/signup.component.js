@@ -43,12 +43,6 @@ export default function SignUp() {
     setPatPhNo();
   }
   return (
-    <>
-    <div className="lab-signIn">
-      <img className="logo_image" src="https://res.cloudinary.com/dobtf02zs/image/upload/v1679632344/logo_gwiuby.png" alt="logo"></img>
-      <h3 className="dia">Dialisa</h3>
-    </div>
-    <div className="sign-in-form">
     <form>
       <h3>Patient Sign Up</h3>
 
@@ -128,7 +122,5 @@ export default function SignUp() {
         Already registered <a href="/sign-in">sign in?</a>
       </p>
     </form>
-    </div>
-    </>
   );
 }

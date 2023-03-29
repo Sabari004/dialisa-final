@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import DoctorNavBar from "../Components/DoctorNavBar";
 import axios from "axios";
+import Styles from "../Styles/Machines.module.css";
 function MachineSlot() {
   let { macId } = useParams();
   const [userName, setUserName] = useState(() => {
@@ -25,29 +26,33 @@ function MachineSlot() {
   return (
     <>
       <DoctorNavBar />
-      <h1>Add Slot</h1>
-      <div>
+      <div className={Styles.slot_container}>
         <div>
-          <label for="">StartTime:</label>
-          <input
-            placeholder="Give Start Time"
-            value={stTime}
-            onChange={(e) => {
-              setStTime(e.target.value);
-            }}
-          ></input>
+          <h1>Add Slot</h1>
+          <div className={Styles.slot_container_in}>
+            <div>
+              <label for="">StartTime:</label>
+              <input
+                placeholder="Give Start Time"
+                value={stTime}
+                onChange={(e) => {
+                  setStTime(e.target.value);
+                }}
+              ></input>
+            </div>
+            <div>
+              <label for="">EndTime:</label>
+              <input
+                placeholder="Give End Time"
+                value={endTime}
+                onChange={(e) => {
+                  setEnTime(e.target.value);
+                }}
+              ></input>
+            </div>
+            <button onClick={addSlot}>AddSlot</button>
+          </div>
         </div>
-        <div>
-          <label for="">EndTime:</label>
-          <input
-            placeholder="Give End Time"
-            value={endTime}
-            onChange={(e) => {
-              setEnTime(e.target.value);
-            }}
-          ></input>
-        </div>
-        <button onClick={addSlot}>AddSlot</button>
       </div>
     </>
   );

@@ -89,13 +89,7 @@ export default function Login() {
     }
   };
   return (
-    <>
-    <div className="lab-signIn">
-      <img className="logo_image" src="https://res.cloudinary.com/dobtf02zs/image/upload/v1679632344/logo_gwiuby.png" alt="logo"></img>
-      <h3 className="dia">Dialisa</h3>
-    </div>
-    <div className="sign-in-form">
-    <form className="sign_in_form">
+    <form>
       <h3>Patient Sign In</h3>
 
       <div className="mb-3">
@@ -148,7 +142,5 @@ export default function Login() {
         Don't have an account <Link to="/patient/signup">Sign Up</Link>
       </p>
     </form>
-    </div>
-    </>
   );
 }
