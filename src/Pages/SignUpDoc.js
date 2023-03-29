@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../Styles/labsignin.css";
 import { useNavigate } from "react-router-dom";
 export default function SignUpDoc() {
   const navigate = useNavigate();
@@ -55,7 +56,13 @@ export default function SignUpDoc() {
   //     });
   // }
   return (
-    <form>
+    <>
+    <div className="lab-signIn">
+      <img className="logo_image" src="https://res.cloudinary.com/dobtf02zs/image/upload/v1679632344/logo_gwiuby.png" alt="logo"></img>
+      <h3 className="dia">Dialisa</h3>
+    </div>
+    <div className="sign-in-form">
+    <form className="sign_in_form">
       <h3>Labaratory Sign Up</h3>
 
       <div className="mb-3">
@@ -158,5 +165,7 @@ export default function SignUpDoc() {
         Already registered <Link to="/doctor/signin">sign in?</Link>
       </p>
     </form>
+    </div>
+      </>
   );
 }
