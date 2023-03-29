@@ -2,6 +2,7 @@ import PatientNavBar from "../Components/PatientNavBar";
 import React, { useState, useEffect } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import Styles from "../Styles/Machines.module.css";
 function Machine() {
   let { labId } = useParams();
   // console.log(labId);
@@ -24,14 +25,16 @@ function Machine() {
   return (
     <>
       <PatientNavBar />
-      <div>
-        <>
-          {machines.map((m) => (
-            <button onClick={(e) => navigate(`${m.macId}`)}>
-              machine{add++}
-            </button>
-          ))}
-        </>
+      <div className={Styles.button_container}>
+        <div className={Styles.button_container_in}>
+          <>
+            {machines.map((m) => (
+              <button onClick={(e) => navigate(`${m.macId}`)}>
+                machine{add++}
+              </button>
+            ))}
+          </>
+        </div>
       </div>
     </>
   );

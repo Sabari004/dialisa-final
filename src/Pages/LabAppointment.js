@@ -2,6 +2,7 @@ import DoctorNavBar from "../Components/DoctorNavBar";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Styles from "../Styles/Machines.module.css";
 function LabAppoinment() {
   const navigate = useNavigate();
   const [userName, setUserName] = useState(() => {
@@ -28,33 +29,29 @@ function LabAppoinment() {
       <DoctorNavBar />
 
       <h1>Lab Appoinment</h1>
-      <button
-        onClick={(e) => {
-          axios.post("http://localhost:8080/machine", {
-            labId: userName.labId,
-          });
-        }}
-      >
-        Add Machine
-      </button>
-      <>
-        {/* {machines && (
+      <div className={Styles.button_container}>
+        <div>
+          <button
+            onClick={(e) => {
+              axios.post("http://localhost:8080/machine", {
+                labId: userName.labId,
+              });
+            }}
+          >
+            Add Machine
+          </button>
           <>
-            {machines.map((mac, ind) => {
-              <h1>rtr</h1>;
-            })}
+            {machines.map((m) => (
+              <div className={Styles.button_container_in}>
+                {/* <h1>{add++}</h1> */}
+                <button onClick={(e) => navigate(`/lab/appoinment/${m.macId}`)}>
+                  machine {add++}
+                </button>
+              </div>
+            ))}
           </>
-        )} */}
-        {machines.map((m) => (
-          <div>
-            {/* <h1>{add++}</h1> */}
-            <button onClick={(e) => navigate(`/lab/appoinment/${m.macId}`)}>
-              machine {add++}
-            </button>
-          </div>
-        ))}
-      </>
-      <div></div>
+        </div>
+      </div>
     </>
   );
 }
