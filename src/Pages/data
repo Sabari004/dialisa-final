@@ -1,0 +1,50 @@
+const hospitals = [
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dcmagxgci/image/upload/v1679633976/hospital_t4ebfq.jpg",
+    name: "KMCH",
+    location: "Neelambur",
+    rating: "4.5/5",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/duc6xzza7/image/upload/v1679682034/images_eeffvb.jpg",
+    name: "KG",
+    location: "Gandhipuram",
+    rating: "4.5/5",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/duc6xzza7/image/upload/v1679682072/CARE-Hospitals-Malakpet_z2i6pd.png",
+    name: "Hindusthan",
+    location: "Neelambur",
+    rating: "4.5/5",
+  },
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/duc6xzza7/image/upload/v1679682040/images_am0mhg.jpg",
+    name: "Apollo",
+    location: "Peelamedu",
+    rating: "4.5/5",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/duc6xzza7/image/upload/v1679682024/campus-Riverside-Ottawa-The-Hospital-Ont_s43iyb.webp",
+    name: "Vasan",
+    location: "Erode",
+    rating: "4.5/5",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/duc6xzza7/image/upload/v1679682005/2bc5e43752c04d55904ea8db56579e96_slhnwn.jpg",
+    name: "Vel Clinic",
+    location: "Madurai",
+    rating: "4.5/5",
+  },
+];

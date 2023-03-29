@@ -1,0 +1,41 @@
+.appoinmentContainer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.containerTable{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 7px 7px 7px 7px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.containerHeading{
+    padding: 30px;
+}
+.containerTable th{
+    padding: 10px 25px;
+    background-color: #0febff;
+    
+}
+.containerTable td{
+    padding: 10px 15px ;
+
+}
+.containerTable td button{
+    border:none;
+    padding: 7px;
+    background-color: rgb(51, 193, 240);
+    border-radius: 5px;
+
+}
+tr:nth-child(odd){
+    background-color: rgb(243, 243, 243);
+}
+.link{
+    margin-top: 50px;
+}
+.nav{
+    display: flex;
+}

@@ -1,0 +1,165 @@
+.hospital_cards{
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.card{
+width: 250px;
+height: 320px;
+
+background: #FFFFFF;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 15px;
+cursor: pointer;
+
+}
+
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.img_container{
+    width: 250px;
+    height: 150px;
+    
+    border-radius: 15px 15px 0px 0px;
+}
+
+.image{
+    width: 230px;
+    height: 130px;
+    margin-top: 10px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.details{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+font-weight: 500;
+color: #000000;
+}
+
+.availability{
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.patientTable{
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+}
+.Table th,td {
+    padding: 10px;
+}
+.heading{
+    padding: 20px;
+}
+
+.container {
+    border: 2px solid #dedede;  
+    background-color: #fafcfc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker{
+    /* border-color: #ccc; */
+    border-radius: 5px;
+    padding: 40px;
+    margin: 10px 0;
+    border: 2px solid #dedede;
+    background-color:#e6e6e6
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.icon {
+    float: left;
+    max-width: 60px;
+  
+}
+
+/* Style the right image */
+.iconright {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0;
+    
+}
+
+/* Style time text */
+.timeright {
+    float: right;
+    margin-right: 50px;
+    /* color: #aaa; */
+}
+
+/* Style time text */
+.timeleft{
+    float: left;
+    /* color: #999; */
+}
+.symptomContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.symptomContainerIn table tr{
+    background-color: #0febff;
+}
+.symptomContainerIn{
+    background-color: #0febff;
+    padding: 50px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.symptomContainerIn button{
+    margin-top: 30px;
+
+}
+
+
+.RecordContainer{
+    margin-top: 50px;
+    height: 450px;
+}
+.buttons{
+    border: none;
+        padding: 7px;
+        background-color: rgb(51, 193, 240);
+        border-radius: 5px;
+}
+.complaintBox{
+    box-shadow: 0px 0px 1.5px 1.5px;
+    padding: 15px;
+    background-color: #d9f5fb;
+}
+.card h3{
+    color: black;
+}
+.appoinmentTable tr,th,td{
+    color: #000000;
+    background-color: white;
+    padding: 5px;
+}
+.inputs{
+    border-radius: 5px;
+    padding: 8px;
+}

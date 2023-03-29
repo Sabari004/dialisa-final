@@ -1,0 +1,98 @@
+.aboutContainer{
+     /* display: flex; */
+    /* justify-content: space-around;  */
+    width: 100%;
+    text-align: center;
+}
+
+.aboutContainerA{
+    width: 100%;
+    display: flex;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+}
+.aboutContainerIn{
+    padding-bottom: 100px;
+}
+.aboutContainerAImg{
+    width: 50%;
+    border-radius: 20px;
+}
+.aboutContainerAImg img{
+
+    border-radius: 20px 0 0 20px ;
+}
+.aboutContainerACont{
+    width: 50%;
+    color: black;
+    text-align: left;
+    padding: 30px;
+}
+.aboutContainerACont h5{
+    color: rgb(95, 95, 95)
+}
+.aboutContainerACont h1{
+    margin-bottom: 50px;
+}
+.aboutContainerA{
+    /* display: flex; */
+    width: 80%;
+    /* background-color:#0febff; */
+    background-color: aquamarine;
+
+}
+.aboutContainerACont tr,td,th{
+    /* background-color: #0febff; */
+    background-color: aquamarine;
+}
+.doctor{
+        border-collapse: collapse;
+            border-spacing: 0;  
+            border-radius: 27px 27px 27px 27px;
+            overflow: hidden;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 8px;
+width: 30%;
+float: left;
+margin-top: 80px;
+/* background-color: blue; */
+
+
+}
+.patient{
+    border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 27px 27px 27px 27px;
+        overflow: hidden;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 7px 8px;
+width: 30%;
+float: right;
+margin-top: 80px;  
+/* background-color: aqua; */
+}
+
+.dmain{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    /* background-color: blueviolet; */
+    /* padding: 1000; */
+}
+.docLink{
+    background-color:rgb(51, 193, 240);
+    text-align: center;  
+   /* margin-top: 100px; */
+   /* justify-content: space-around; */
+   
+}
+.link{
+    color: black;
+    text-decoration: none;
+    font-size:xx-large;
+
+}
+/* .image{
+   width:100%
+} */

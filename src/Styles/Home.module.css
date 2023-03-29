@@ -1,0 +1,78 @@
+.containerHomeIn{
+    width: 95%;
+    display: flex;
+}
+.containerHome{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+
+}
+.containerHomeImg{
+    width: 50%;
+}
+.containerHomeImg img{
+    width: 100%;
+
+}
+.containerHomeCont{
+    width: 50%;
+    padding-left: 100px;
+    padding-top: 10%;
+}
+.containerHome h1{
+    color: blue;
+}
+.containerHome span{
+    color: rgb(3, 188, 255);
+}
+.container2Home{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+.container2HomeIn{
+    background-color: aquamarine;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container2HomeIn span{
+    color: white;
+}
+.container3Home{
+    display: flex;
+    justify-content: space-around;
+}
+.container3HomeIn{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+}
+.container3HomeCont{
+    background-color: aquamarine;
+    width: 50%;
+    border-radius: 20px 0 0 20px ;
+}
+.container3HomeImg{
+    width: 50%;
+    border: 2px solid aquamarine;
+    display: flex;
+    border-radius:0 20px 20px 0;
+    justify-content: space-around;
+}
+.container3Home h1{
+    margin-top: 30px;
+    padding: 20px;
+}
+.container3Home h4{
+    padding: 20px;
+    color: white;
+}
+.container3HomeImg img{
+    width: 70%;
+
+}
