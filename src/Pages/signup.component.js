@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../Styles/signupdoc.css';
 export default function SignUp() {
   const [patId, setPatId] = useState("");
   const [PatientName, setPatientName] = useState("");
@@ -14,7 +15,7 @@ export default function SignUp() {
   async function validateUser(e) {
     e.preventDefault();
     setlistOfUsers();
-    await axios.post("http://localhost:8080/patient", {
+    axios.post("http://localhost:8080/patient", {
       patId: patId,
       patientName: PatientName,
       password: password,
@@ -33,7 +34,7 @@ export default function SignUp() {
         patPhNo: patPhNo,
       })
     );
-    navigate(`/patient/appoinment`);
+    navigate(`/patient/home`);
     alert("PatientRegister Successfully");
     setPatId();
     setPatientName();
@@ -43,11 +44,11 @@ export default function SignUp() {
     setPatPhNo();
   }
   return (
-    <form>
-      <h3>Patient Sign Up</h3>
+    <form  className="signdoc-input-form">
+      <h3 className="signdoc-in">Patient Sign Up</h3>
 
       <div className="mb-3">
-        <label>Patient Id</label>
+        <label className="signdoc-label">Patient Id</label>
         <input
           type="number"
           className="form-control"
@@ -57,7 +58,7 @@ export default function SignUp() {
         />
       </div>
       <div className="mb-3">
-        <label>Patient Name</label>
+        <label className="signdoc-label">Patient Name</label>
         <input
           type="text"
           className="form-control"
@@ -67,7 +68,7 @@ export default function SignUp() {
         />
       </div>
       <div className="mb-3">
-        <label>Patient Age</label>
+        <label className="signdoc-label">Patient Age</label>
         <input
           type="number"
           className="form-control"
@@ -77,7 +78,7 @@ export default function SignUp() {
         />
       </div>
       <div className="mb-3">
-        <label>Sex</label>
+        <label className="signdoc-label">Sex</label>
         <input
           type="text"
           className="form-control"
@@ -88,7 +89,7 @@ export default function SignUp() {
       </div>
 
       <div className="mb-3">
-        <label>Phone Number</label>
+        <label className="signdoc-label">Phone Number</label>
         <input
           type="number"
           className="form-control"
@@ -99,7 +100,7 @@ export default function SignUp() {
       </div>
 
       <div className="mb-3">
-        <label>Password</label>
+        <label className="signdoc-label">Password</label>
         <input
           type="password"
           className="form-control"
@@ -118,6 +119,7 @@ export default function SignUp() {
           Sign Up
         </button>
       </div>
+      <br />
       <p className="forgot-password text-right">
         Already registered <a href="/sign-in">sign in?</a>
       </p>

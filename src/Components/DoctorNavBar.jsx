@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import 'src/Styles/DoctorNavBar.css';
+import '../Styles/DoctorNavBar.css';
 import styles from "../Styles/Doctors.module.css";
 import img from "../assests/logo.png";
 import * as Icon from "react-bootstrap-icons";
@@ -16,7 +18,7 @@ function DoctorNavBar() {
             class="d-inline-block align-text-top"
           />
 
-          <a class="navbar-brand" href="#" style={{ fontSize: 30 }}>
+          <a class="navbar-brand" href="/lab/home" style={{ fontSize: 30 }}>
             Dializa
           </a>
           <button
@@ -32,14 +34,14 @@ function DoctorNavBar() {
           </button>
           <div
             class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
+            // id="navbarNav"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item">
+            <ul class="navbar-nav navigation">
+              <li class="navbar-navd">
                 <Link
                   class="nav-link active"
                   to="/lab/home"
-                  style={{ fontSize: 20 }}
+                  style={{ fontSize: 20 , marginLeft : 3 , marginRight : 5}}
                 >
                   Home
                 </Link>
@@ -48,25 +50,25 @@ function DoctorNavBar() {
                 <Link
                   class="nav-link active"
                   to="/lab/appoinment"
-                  style={{ fontSize: 20 }}
+                  style={{ fontSize: 20 , marginLeft : 3 , marginRight : 5 }}
                 >
-                  Slots
+                  Devices
                 </Link>
               </li>
               <li class="nav-item">
                 <Link
                   class="nav-link active"
                   to="/lab/slot"
-                  style={{ fontSize: 20 }}
+                  style={{fontSize: 20 , marginLeft : 3 , marginRight : 5}}
                 >
-                  Appointment
+                  Booked Appointments
                 </Link>
               </li>
               <li class="nav-item">
                 <Link
                   class="nav-link active"
                   to="/lab/aboutus"
-                  style={{ fontSize: 20 }}
+                  style={{ fontSize: 20 , marginLeft : 3 , marginRight : 5 }}
                 >
                   About
                 </Link>

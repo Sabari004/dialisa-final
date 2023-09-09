@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Patient;
+import com.example.demo.repository.PatientRepo;
 import com.example.demo.service.PatientService;
 
 @RestController
@@ -21,6 +22,8 @@ import com.example.demo.service.PatientService;
 public class PatientController{
 	@Autowired
 	PatientService repos;
+	@Autowired
+	PatientRepo  repo;
 	@GetMapping("/patient")
 	public List<Patient> getPat(){
 		return repos.getPatients();
@@ -30,8 +33,8 @@ public class PatientController{
 		return repos.getPatientById(id);
 	}
 	@PostMapping("/patient")
-	public String postPat(@RequestBody Patient p) {
-		return repos.addPatient(p);
+	public Patient postPat(@RequestBody Patient p) {
+		return repo.save(p);
 	}
 	
 	

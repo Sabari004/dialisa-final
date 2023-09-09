@@ -2,24 +2,32 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import '../Styles/signupdoc.css';
 export default function SignUpDoc() {
   const navigate = useNavigate();
   const [labName, setLabName] = useState("");
   const [password, setPassword] = useState("");
   const [labPhNo, setPhNo] = useState();
-  const [labId, setLabId] = useState(1);
+  const [labId, setLabId] = useState();
   const [labLocation, setLabLocation] = useState("");
   const [error, setError] = useState("");
   const [price, setPrice] = useState();
+
+  const randomNumberInRange = (min, max) => {
+    return Math.floor(Math.random() 
+            * (max - min + 1)) + min;
+};
+
   async function validateUser(e) {
     e.preventDefault();
-    await axios.post("http://localhost:8080/lab", {
+    await axios.post("http://localhost:8080/lab/addlab", {
       labId: labId,
       labName: labName,
       labLocation: labLocation,
       password: password,
       labPhNo: labPhNo,
       price: price,
+      rating: 0
     });
     alert("success");
 
@@ -31,6 +39,7 @@ export default function SignUpDoc() {
         labLocation: labLocation,
         password: password,
         labPhNo: labPhNo,
+        rating: 0,
         price: price,
       })
     );
@@ -55,11 +64,11 @@ export default function SignUpDoc() {
   //     });
   // }
   return (
-    <form>
-      <h3>Labaratory Sign Up</h3>
+    <form  className="signdoc-input-form">
+      <h3 className="signdoc-in">Labaratory Sign Up</h3>
 
       <div className="mb-3">
-        <label>Lab Id</label>
+        <label className="signdoc-label">Lab Id</label>
         <input
           type="number"
           className="form-control"
@@ -68,10 +77,11 @@ export default function SignUpDoc() {
           onChange={(e) => {
             // validate(docId);
             setLabId(e.target.value);
-            console.log(labId);
+            // console.log(labId);
             // if (doctors.docId != docId) {
             //   setError("User Id is taken");
-            // } else {
+            // }
+            //  else {
             //   setError("User Id is not taken");
             // }
           }}
@@ -79,7 +89,7 @@ export default function SignUpDoc() {
       </div>
       <p>{error}</p>
       <div className="mb-3">
-        <label>Lab Name</label>
+        <label className="signdoc-label">Lab Name</label>
         <input
           type="text"
           className="form-control"
@@ -87,35 +97,28 @@ export default function SignUpDoc() {
           value={labName}
           onChange={(e) => {
             setLabName(e.target.value);
-            console.log(labName);
+            // console.log(labName);
           }}
+          
         />
+        {/* console.log(labName); */}
       </div>
 
-      {/* <div className="mb-3">
-        <label></label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Gender"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-        />
-      </div> */}
       <div className="mb-3">
-        <label>LabLocation</label>
+        <label className="signdoc-label">LabLocation</label>
         <input
           className="form-control"
           value={labLocation}
           placeholder="Enter Location"
           onChange={(e) => {
             setLabLocation(e.target.value);
-            console.log(labLocation);
+            
           }}
         ></input>
+        {/* console.log(labLocation); */}
       </div>
       <div className="mb-3">
-        <label>Password</label>
+        <label className="signdoc-label">Password</label>
         <input
           type="password"
           className="form-control"
@@ -125,7 +128,7 @@ export default function SignUpDoc() {
         />
       </div>
       <div className="mb-3">
-        <label>Lab Phone No</label>
+        <label className="signdoc-label">Lab Phone No</label>
         <input
           type="number"
           className="form-control"
@@ -135,7 +138,7 @@ export default function SignUpDoc() {
         />
       </div>
       <div className="mb-3">
-        <label>Price</label>
+        <label className="signdoc-label">Price</label>
         <input
           type="number"
           className="form-control"

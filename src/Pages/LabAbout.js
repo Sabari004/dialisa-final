@@ -24,7 +24,7 @@ function About() {
           <div className={Styles.aboutContainerA}>
             <div className={Styles.aboutContainerACont}>
               <h1>Contact us</h1>
-              <table style={{ marginTop: "50px" }}>
+              <table >
                 <tr>
                   <td>
                     <h5>Phone :</h5>

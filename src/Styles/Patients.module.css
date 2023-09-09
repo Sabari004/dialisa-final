@@ -9,11 +9,12 @@
 
 .card{
 width: 250px;
-height: 320px;
+height: 315px;
 
 background: #FFFFFF;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 border-radius: 15px;
+/* margin-bottom: 5%; */
 cursor: pointer;
 
 }
@@ -153,6 +154,10 @@ color: #000000;
 }
 .card h3{
     color: black;
+}
+.card {
+    margin-bottom: 1%;
+    /* padding-bottom: ; */
 }
 .appoinmentTable tr,th,td{
     color: #000000;

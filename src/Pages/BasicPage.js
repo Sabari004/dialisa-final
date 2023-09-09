@@ -19,11 +19,12 @@ function BasicPage() {
           </div>
           <div className={Style.docLink}>
             <Link to="/lab/signin" className={Style.link}>
-              Labaratory <Icon.ArrowRight />
+            DIALYSIS CENTER
+              
             </Link>
           </div>
         </div>
-        <div className={Style.patient}>
+        <div className={Style.doctor}>
           <img
             src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=600"
             height="auto"
@@ -34,7 +35,7 @@ function BasicPage() {
           />
           <div className={Style.docLink}>
             <Link to="/patient/signin" className={Style.link}>
-              Patient <Icon.ArrowRight />
+              PATIENT
             </Link>
           </div>
         </div>

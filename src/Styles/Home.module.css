@@ -32,7 +32,7 @@
     padding: 100px;
 }
 .container2HomeIn{
-    background-color: aquamarine;
+    background-color: #4169E1;
     padding: 30px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -53,13 +53,13 @@
     border-radius: 20px;
 }
 .container3HomeCont{
-    background-color: aquamarine;
+    background-color: #4169E1;
     width: 50%;
     border-radius: 20px 0 0 20px ;
 }
 .container3HomeImg{
     width: 50%;
-    border: 2px solid aquamarine;
+    border: 2px solid white;
     display: flex;
     border-radius:0 20px 20px 0;
     justify-content: space-around;

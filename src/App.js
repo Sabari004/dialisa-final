@@ -3,12 +3,12 @@ import "./App.css";
 import Main from "./main";
 import BasicPage from "./Pages/BasicPage.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginDoc from "./Pages/LoginDoc";
+import LoginDoc from "./Pages/login/LoginDoc";
 import SignUpDoc from "./Pages/SignUpDoc";
 import Login from "./Pages/login.component";
 import SignUp from "./Pages/signup.component";
 import PatientHome from "./Pages/PatientHome";
-import LabHome from "./Pages/LabHome";
+import LabHome from "./Pages/home/LabHome";
 import LabAbout from "./Pages/LabAbout";
 import PatientAbout from "./Pages/PatientAbout";
 import PatientComplaint from "./Pages/Complaint.";
@@ -20,6 +20,7 @@ import Hospitals from "./Pages/Hospitals";
 import BookPatientAppointment from "./Pages/BookPatientAppointment";
 import PatientBookedSlots from "./Pages/PatientBookedSlots";
 import TodaysAppointment from "./Pages/TodaysAppointment";
+import LabAppointmentAddMachine from "./Pages/LabAppointmentAddMachine";
 function App() {
   return (
     <BrowserRouter>
@@ -47,6 +48,9 @@ function App() {
         <Route path="/lab/slot" element={<TodaysAppointment />}></Route>
         <Route path="/patient/signup" element={<SignUp />}></Route>
         <Route path="/patient/signin" element={<Login />}></Route>
+        <Route path = '/lab/appointment/addmachine' element={<LabAppointmentAddMachine/>} />
+
+
 
         {/* <Route path="/patient//signin" element={<Login />}></Route> */}
         {/* <Route path="/lab/:labId/home" element={<LabHome />}></Route> */}

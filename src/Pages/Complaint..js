@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import PatientNavBar from '../Components/PatientNavBar'
 import Style from '../Styles/Patients.module.css'
-import * as Icon from 'react-bootstrap-icons'
+import * as Icon from 'react-bootstrap-icons';
+import '../Styles/DoctorNavBar.css';
 import {Link} from 'react-router-dom'
 function Complaint() {
   const [count,setCount]=useState(4);
-  const [comp,setComp]=useState("")
-  console.log(comp)
+  const [comp,setComp]=useState("");
+  // console.log(comp);
   const [getfeedbacks, setGetFeedbacks] = useState([
     {
       hospitalId: 1,
-      complaints: "Long Wait Times. ..."
+      complaints: "Lack of Hygiene. ..."
     },
     {
       hospitalId: 2,
@@ -31,11 +32,11 @@ function Complaint() {
           <div>
 
             <h3>
-              FeedBacks:
+              Feedbacks:
             </h3>
             <div>
-
-              <textarea name="Complaints" type="text"rows={5} value={comp} onChange={(e)=>{setFeedBacks(e.target.value)}} cols={60} style={{textAlign:'center'}}placeholder="Give your Complaints Here"  />
+              <input className='feedback-input-box' type='text'   onChange={(e)=>{setComp(e.target.value)}} placeholder="Give your Complaints Here" ></input>
+              {/* <input type = "text" name="Complaints" rows={5} value={comp} onChange={(e)=>{setFeedBacks(e.target.value)}} cols={60} style={{textAlign:'center'}}placeholder="Give your Complaints Here"  /> */}
             </div>
             <div>
 
@@ -45,33 +46,7 @@ function Complaint() {
             </div>
           </div>
         </div>
-        {/* <div className={Style.patientTable}>
-        <div>
-        <h2 className={Style.heading}>Other Complaints:</h2>
-        <div className={Style.patientTable}>
 
-        <table className={Style.Table}>
-          <thead >
-              <tr>
-             
-              <th>Complaints</th>
-              </tr>
-             </thead>
-        {
-        getcomplaints.map((co,index)=>
-             <tbody >
-              <tr>
-                
-                <td>{co.complaints}</td>
-              </tr>
-             </tbody>
-        
-        )
-      }
-      </table>
-        </div>
-      </div>
-      </div> */}
         <div className={Style.patientTable} style={{marginTop:60}}>
          <div>
 

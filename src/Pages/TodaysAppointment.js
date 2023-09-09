@@ -49,15 +49,18 @@ export default function TodaysAppointment() {
               <th>Machine id</th>
               <th>Start</th>
               <th>End</th>
-              <th>Flag</th>
+              {/* <th>Flag</th> */}
             </tr>
-            {shifts.map((shift) => (
-              <tr>
+            {shifts.map((shift,index) => (
+              <tr
+              key={index}
+              className={index % 2 === 0 ? Styles.evenRow : Styles.oddRow}
+            >
                 <td>{shift.patId}</td>
                 <td>{shift.macId}</td>
                 <td>{shift.stTime}</td>
                 <td>{shift.endTime}</td>
-                <td>{name(shift.flag)}</td>
+                {/* <td>{name(shift.flag)}</td> */}
               </tr>
             ))}
           </table>

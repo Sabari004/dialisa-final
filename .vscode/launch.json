@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GetPostApplication<getPost>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.demo.GetPostApplication",
+            "projectName": "getPost",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

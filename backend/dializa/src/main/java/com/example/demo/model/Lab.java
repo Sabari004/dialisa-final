@@ -10,6 +10,10 @@ public class Lab {
 	private int labId;
 	private int price;
     private String password;
+	private String labName;
+	private String labLocation;
+	private float rating;
+	private int labPhNo;
 	public String getPassword() {
 		return password;
 	}
@@ -22,9 +26,7 @@ public class Lab {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	private String labName;
-	private String labLocation;
-	private float rating;
+	
 	public int getLabId() {
 		return labId;
 	}
@@ -55,7 +57,7 @@ public class Lab {
 	public void setLabPhNo(int labPhNo) {
 		this.labPhNo = labPhNo;
 	}
-	private int labPhNo;
+	
 	
 
 }

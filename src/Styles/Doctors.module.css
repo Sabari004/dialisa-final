@@ -19,7 +19,7 @@
 }
 .containerTable th{
     padding: 10px 25px;
-    background-color: #0febff;
+    background-color: #0096FF;
     
 }
 .containerTable td{
@@ -42,3 +42,18 @@ tr:nth-child(odd){
 .nav{
     display: flex;
 }
+
+
+/* .oddRow {
+    background-color: #ab3636;
+  }
+  
+
+  .evenRow {
+    background-color: #ffffff; 
+  }
+
+  tr:nth-child(even) {
+    background-color: #026161;
+  }
+   */

@@ -1,0 +1,35 @@
+/* 
+.navbar-navdf{
+    display: inline-block;
+    position: relative;
+} */
+.navbar-na, .navbar-navd {
+    /* display: flex; */
+  /* position: relative; */
+ 
+  color: #0087ca;
+}
+.navbar-navd ::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.navbar-navd :hover ::after {
+    transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.feedback-input-box{
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  font-size: medium;
+  padding: 3%;
+}

@@ -38,7 +38,7 @@ function PatientBookedSlots() {
           <h2>Your Appoinment</h2>
           <table className={Styles.containerTable}>
             <tr>
-              <th>Lab Name</th>
+              <th>Lab Id</th>
               <th>Machine id</th>
               <th>Start</th>
               <th>End</th>

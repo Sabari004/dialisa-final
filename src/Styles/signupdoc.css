@@ -1,0 +1,19 @@
+.signdoc-input-form {
+    padding-left: 5%;
+    padding-right: 5%;
+    /* text-align: center; */
+    justify-content: space-around;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: 1%;
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+.signdoc-in {
+    text-align: center;
+}
+.signdoc-label {
+    margin-left: 2%;
+}

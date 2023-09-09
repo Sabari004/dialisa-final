@@ -53,6 +53,7 @@ import axios from "axios";
 import React, { useState, useEffect, state } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import '../Styles/logindoc.css';
 // import {getAuth, createUserWithEmailandPassword} from "firebase/auth"
 export default function Login() {
   // let auth = getAuth();
@@ -89,8 +90,8 @@ export default function Login() {
     }
   };
   return (
-    <form>
-      <h3>Patient Sign In</h3>
+    <form className="logindoc-input-form">
+      <h3 className="logindoc-in">Patient Sign In</h3>
 
       <div className="mb-3">
         <label>Patient Id</label>
@@ -138,6 +139,7 @@ export default function Login() {
           Submit
         </button>
       </div>
+      <br />
       <p className="forgot-password text-right">
         Don't have an account <Link to="/patient/signup">Sign Up</Link>
       </p>

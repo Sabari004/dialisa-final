@@ -21,6 +21,8 @@ function MachineSlot() {
       macId: macId,
       labId: userName.labId,
     });
+    setStTime("");
+    setEnTime("");
     alert("Slots added");
   }
   return (
@@ -33,6 +35,7 @@ function MachineSlot() {
             <div>
               <label for="">StartTime:</label>
               <input
+              type="time"
                 placeholder="Give Start Time"
                 value={stTime}
                 onChange={(e) => {
@@ -43,6 +46,7 @@ function MachineSlot() {
             <div>
               <label for="">EndTime:</label>
               <input
+              type="time"
                 placeholder="Give End Time"
                 value={endTime}
                 onChange={(e) => {
